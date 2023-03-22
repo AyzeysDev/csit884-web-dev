@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Week 4 lab quiz</title>
+        <script>
+            function handleLionPicture() {
+                var imgfield = document.getElementById("picField");
+                imgfield.src = "lion.png";
+            }
+
+            function handleFrogPicture() {
+                var imgfield = document.getElementById("picField");
+                imgfield.src = "frog.png";
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="handleLionPicture()">Lion</button>
+        <button onclick="handleFrogPicture()">Frog</button>
+        <div></div>
+        <br />
+        <img id="picField" />
+    </body>
+</html>

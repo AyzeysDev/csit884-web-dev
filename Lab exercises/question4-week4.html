@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Week 4 lab quiz</title>
+        <script>
+            function lionHandler() {
+                var textField = document.getElementById("textValue");
+                textField.innerHTML = "Roar";
+                textField.style.color = "orange";
+            }
+
+            function frogHandler() {
+                var textField = document.getElementById("textValue");
+                textField.innerHTML = "Ribbit";
+                textField.style.color = "green";
+            }
+        </script>
+    </head>
+    <body>
+        <img src="lion.png" width="300px" onclick="lionHandler()"/>
+        <img src="frog.png" width="300px" onclick="frogHandler()"/>
+        <div />
+        <br />
+        <div id="textValue" />
+    </body>
+</html>
