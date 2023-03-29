@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>Week 5 Library Webpage</title>
+  </head>
+  <body>
+    <h3>Whosville library book search</h3>
+    <form action="http://library.whosville/bsearch" method="get">
+      <table border="0">
+        <tr>
+          <td>Author Name:</td>
+          <td>
+            <input type="text" size="30" name="author" />
+          </td>
+        </tr>
+        <tr>
+          <td>Publication year:</td>
+          <td>
+            <input type="text" size="30" name="publication" />
+          </td>
+        </tr>
+        <tr>
+          <td>Subject:</td>
+          <td>
+            <input type="checkbox" value="mth" name="sub" /> Mathematics <br />
+            <input type="checkbox" value="cs" name="sub" /> Computer Science
+            <br />
+            <input type="checkbox" value="bio" name="sub" /> Biology <br />
+            <input type="checkbox" value="phy" name="sub" /> Physics <br />
+            <input type="checkbox" value="chem" name="sub" /> Chemistry <br />
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <input type="submit" value="Search" />
+            <input type="reset" value="Clear" />
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
