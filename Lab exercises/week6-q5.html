@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>Week 6 Q5</title>
+    <script>
+      var slideshowAnimation;
+      function startAnimation() {
+        slideshowAnimation = setInterval(showImage, 1000);
+      }
+      var IMAGE_LIST = [
+        "a1.png",
+        "a2.png",
+        "a3.png",
+        "a4.png",
+        "a5.png",
+      ];
+      function showImage() {
+        var index = Math.floor(Math.random() * IMAGE_LIST.length);
+
+        var imgElement = document.getElementById("imageHolder");
+        imgElement.src = IMAGE_LIST[index];
+      }
+      function stopAnimation() {
+        clearInterval(slideshowAnimation);
+      }
+    </script>
+  </head>
+  <body>
+    <button onClick="startAnimation()">Start Slideshow</button>
+    <button onClick="stopAnimation()">Stop Slideshow</button>
+    <br /><br />
+    <img id="imageHolder" height="500px" />
+  </body>
+</html>

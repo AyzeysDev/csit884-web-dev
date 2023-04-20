@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <title>Week 6 Q2</title>
+    <script>
+      function checkResult() {
+        var inputField1 = document.getElementById("input1");
+        var number1 = Number(inputField1.value);
+
+        var inputField2 = document.getElementById("input2");
+        var number2 = Number(inputField2.value);
+
+        var operationSelect = document.getElementById("operationSelect");
+        var operation = operationSelect.value;
+
+        var resultField = document.getElementById("result");
+        var result = resultField.value;
+
+        var flag = false;
+        if (operation == "add") {
+          actualResult = number1 + number2;
+          if (result == actualResult) {
+            flag = true
+            }
+        } else if (operation == "subtract") {
+            actualResult = number1 - number2;
+            if (result == actualResult) {
+            flag = true
+            }
+        } else if (operation == "multiply") {
+            actualResult = number1 * number2;
+            if (result == actualResult) {
+            flag = true
+            }
+        }
+
+        var resultMessage;
+        if(flag == false) {
+            resultMessage = "Incorrect, please try again."
+        } else {
+            resultMessage = "Correct!"
+        }
+
+        var textSpace = document.getElementById("resultMessage");
+        textSpace.innerHTML = resultMessage;
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" id="input1" />
+    <select id="operationSelect">
+      <option value="add">+</option>
+      <option value="subtract">-</option>
+      <option value="multiply">x</option>
+    </select>
+    <input type="text" id="input2" />
+    <span> = </span>
+    <input type="text" id="result" />
+    <button onclick="checkResult()">Check</button>
+    <span id="resultMessage"></span>
+  </body>
+</html>

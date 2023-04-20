@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Week 6 Q4</title>
+    <script>
+      var counterSchedule;
+      var counter = 0;
+      function startCounterAnimation() {
+        counterSchedule = setInterval(showCounter, 1000);
+      }
+      function stopCounterAnimation() {
+        clearInterval(counterSchedule);
+      }
+
+      function showCounter() {
+        counter = counter + 1;
+        var counterSpan = document.getElementById("counter");
+        counterSpan.innerHTML = counter;
+      }
+    </script>
+  </head>
+  <body>
+    <button onClick="startCounterAnimation()">Start counter</button>
+    <button onClick="stopCounterAnimation()">Stop counter</button>
+    <br /><br />
+    <font size="7">
+      <span id="counter"></span>
+    </font>
+  </body>
+</html>
